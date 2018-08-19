@@ -38,7 +38,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
 
         Date startTime = currentEvent.getEventStartTime();
         Date endTime = currentEvent.getEventEndTime();
-        Date timeNow = currentEvent.getTimeNow();
+        Date timeNow = Calendar.getInstance().getTime();
         boolean eventStarted = timeNow.compareTo(startTime) > 0;
         boolean eventEnded = timeNow.compareTo(endTime) > 0;
 
